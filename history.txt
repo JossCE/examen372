@@ -1,0 +1,37 @@
+    1  cd ~
+    2  history
+    3  mkdir examen372
+    4  cd examen372
+    5  git init
+    6  create.sh
+    7  toucj create.sh
+    8  touch create.sh
+    9  code create.sh
+   10  echo "#! /bin/bash" > create.sh
+   11  cat create.sh
+   12  git init 
+   13  git add examen372
+   14  git status
+   15  git add .
+   16  git commit -m "Initial commit, script added"
+   17  git remote add origin https://github.com/JossCE/examen372.git
+   18  git status
+   19  cd ~
+   20  mkdir Examen372
+   21  mkdir Examen_372
+   22  cd Examen_372
+   23  touch create.sh
+   24  ls Examen_372
+   25  ls
+   26  echo "#! /bin/bash" > create.sh
+   27  git init
+   28  git status
+   29  cd
+   30  cd examen372
+   31  git status
+   32  git add .
+   33  git commit -m "Second commit, structure created"
+   34  git status
+   35  git add .
+   36  git commit -m "Third commit, add README.md and final script updated"
+   37  history > history.txt
