@@ -19,15 +19,21 @@ done
 
 curl -o meme.jpg "https://pm1.aminoapps.com/7021/417429318f6b29b6bc737fb95ba1ddafc9ba2decr1-720-642v2_hq.jpg"
 
-
 mkdir css
 mkdir js
 mkdir docs
 mkdir img
 
+mv style.css css/
+mv app.js js/
+mv meme.jpg img/
+
 cd docs
 mkdir text
 mkdir python
+cd ..
+mv main.py ./docs/python/
+mv file*.txt ./docs/text/
 
 
 
