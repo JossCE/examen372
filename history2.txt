@@ -1,0 +1,500 @@
+   33  curl https://jsonplaceholder.typicode.com/users/$.phone
+   34  curl https://jsonplaceholder.typicode.com/users/get -X GET -d '{"id"}' 
+   35  curl https://jsonplaceholder.typicode.com/users/ -X GET -d '{"id"}' 
+   36  curl https://jsonplaceholder.typicode.com/users/ -X GET -d '{"phone"}' 
+   37  curl https://jsonplaceholder.typicode.com/users/ -X POST -d '{"phone"}' 
+   38  curl https://jsonplaceholder.typicode.com/users/post -X POST -d '{"phone"}' 
+   39  curl https://jsonplaceholder.typicode.com/users/post -X POST -d '{"phone"}' 
+   40  curl --help
+   41  curl https://jsonplaceholder.typicode.com/users/ -d
+   42  curl --manual
+   43  curl https://jsonplaceholder.typicode.com/users/ -d "phone"
+   44  curl -d https://jsonplaceholder.typicode.com/users/
+   45  curl -d https://jsonplaceholder.typicode.com/users/
+   46  curl --manual -d
+   47  clear
+   48  curl --data-urlencode name=id https://jsonplaceholder.typicode.com/users/
+   49  curl --request GET https://jsonplaceholder.typicode.com/users/
+   50  curl  --request GET '{"phone"}' [200~https://jsonplaceholder.typicode.com/user 
+   51  curl https://jsonplaceholder.typicode.com/users/ --request GET '{"phone"}'
+   52  clear
+   53  curl https://jsonplaceholder.typicode.com/users/ -X GET 
+   54  curl https://jsonplaceholder.typicode.com/users/ -X POST '{"phone"}'
+   55  curl https://jsonplaceholder.typicode.com/users/ -X POST '{"phone": 12334}'
+   56  curl https://jsonplaceholder.typicode.com/users/ 
+   57  [200~curl -X POST https://reqbin.com/echo/post/json
+   58     -H 'Content-Type: application/json'
+   59     -H 'Accept: application/json'
+   60     -d '{"Id": 78912, "Quantity": 1, "Price": 19.00}'
+   61  curl -X POST https://reqbin.com/echo/post/json
+   62  curl -X POST https://reqbin.com/echo/post/json -H 'Content-Type: application/json' -H 'Accept: application/json' -d '{"Id": 78912, "Quantity": 1, "Price": 19.00}'
+   63  curl -X POST https://reqbin.com/echo/post/json -d '{"Id": 78912, "Quantity": 1, "Price": 19.00}'
+   64  curl -X POST https://reqbin.com/echo/post/json -X POST -d '{"Id": 78912, "Quantity": 1, "Price": 19.00}'
+   65  curl -X POST https://reqbin.com/echo/post/json -X GET -d '{"Id": 78912, "Quantity": 1, "Price": 19.00}'
+   66  clear
+   67  curl -X POST https://reqbin.com/echo/post/json -X GET -d '{"Id": 78912, "Quantity": 1, "Price": 19.00}'
+   68  claer
+   69  clear
+   70  curl https://jsonplaceholder.typicode.com/users/ 
+   71  curl https://jsonplaceholder.typicode.com/users/post -X 
+   72  curl https://jsonplaceholder.typicode.com/users/post -X POST
+   73  curl https://jsonplaceholder.typicode.com/users/post -X POST
+   74  curl https://jsonplaceholder.typicode.com/users/ awk phone
+   75  curl https://jsonplaceholder.typicode.com/users/ -awk phone
+   76  clear
+   77  jq 'phone[]'https://jsonplaceholder.typicode.com/users/
+   78  jq '.[]phone'https://jsonplaceholder.typicode.com/users/
+   79  jq '.[]phone'https://jsonplaceholder.typicode.com/users/
+   80  jq .phone https://jsonplaceholder.typicode.com/users/
+   81  curl jq .phone https://jsonplaceholder.typicode.com/users/
+   82  jq '.phone[]' https://jsonplaceholder.typicode.com/users/
+   83  curl -X POST -d '.phone[]' https://jsonplaceholder.typicode.com/users/
+   84  curl -X GET -d '.phone[]' https://jsonplaceholder.typicode.com/users/
+   85  curl -X GET -d '{phone[]}' https://jsonplaceholder.typicode.com/users/
+   86  clear
+   87  curl -d "param1=value1&param2=value2" -H "Content-Type: application/x-www-form-urlencoded" -X POST https://jsonplaceholder.typicode.com/users/
+   88  curl -d "param1=value1&param2=value2" -H "Content-Type: application/x-www-form-urlencoded" -X GET https://jsonplaceholder.typicode.com/users/
+   89  CLEAR
+   90  curl -X POST https://reqbin.com/echo/post/json -H 'Content-Type: application/json' -d '{"id": 1}'
+   91  curl -X POST https://reqbin.com/echo/post/json -d '{"id": 1}'
+   92  curl -X GET https://reqbin.com/echo/post/json -d '{"id": 1}'
+   93  clear
+   94  curl –data “text=Hello” https://myDomain.com/firstPage.jsp
+   95  curl –data “text=Hello” https://jsonplaceholder.typicode.com/users/
+   96  awk '{phone}' https://jsonplaceholder.typicode.com/users/
+   97  js .awk '{phone}' https://jsonplaceholder.typicode.com/users/
+   98  curl awk '{phone}' https://jsonplaceholder.typicode.com/users/
+   99  awk '{.phone}' https://jsonplaceholder.typicode.com/users/
+  100  awk '{phone[]}' https://jsonplaceholder.typicode.com/users/
+  101  awk '{phone[0]}' https://jsonplaceholder.typicode.com/users/
+  102  awk -v '{phone}' https://jsonplaceholder.typicode.com/users/
+  103  curl https://jsonplaceholder.typicode.com/users/1
+  104  curl https://jsonplaceholder.typicode.com/users/1/phone
+  105  curl https://jsonplaceholder.typicode.com/users/1/'{phone}'
+  106  curl https://jsonplaceholder.typicode.com/users/1/'{phone[]}'
+  107  curl https://jsonplaceholder.typicode.com/users/'{name[]}'/'{phone[]}'
+  108  curl https://jsonplaceholder.typicode.com/users/'{"name[]"}'/'{"phone[]"}'
+  109  curl https://jsonplaceholder.typicode.com/users/'{"name[0]"}'/'{"phone[0]"}'
+  110  time=`uptime` && curl -X POST "https://url/hook/abcd123" -d "message=$time"
+  111  curl -X POST "https://url/hook/abcd123" -d "message=$time"
+  112  curl --data "id=12&name=joss" https://jsonplaceholder.typicode.com/users/
+  113  curl -X GET --data "id=12&name=joss" https://jsonplaceholder.typicode.com/users/
+  114  curl -X POST --data "id=12&name=joss" https://jsonplaceholder.typicode.com/users/
+  115  curl https://jsonplaceholder.typicode.com/users/ 
+  116  clear
+  117  curl https://jsonplaceholder.typicode.com/users/ -X GET -d '{"phone"}'
+  118  curl https://jsonplaceholder.typicode.com/users/ -X GET -d '{"phone"}'
+  119  clear
+  120  curl https://jsonplaceholder.typicode.com/users/ awk '/phone/ {print $0}'
+  121  curl https://jsonplaceholder.typicode.com/users/ | awk '/phone/ {print $0}'
+  122  curl https://jsonplaceholder.typicode.com/users/ | cut '/phone/ {print $0}'
+  123  curl https://jsonplaceholder.typicode.com/users/get -X GET -d '{print $"phone": 0}'
+  124  curl https://jsonplaceholder.typicode.com/users/ -X GET -d '{print $"phone": 0}'
+  125  curl https://jsonplaceholder.typicode.com/users/ | cut '/phone/{print $0}'
+  126  curl https://jsonplaceholder.typicode.com/users/ | awk '/phone/{print $0}'
+  127  clear
+  128  curl https://jsonplaceholder.typicode.com/users/ | awk '/phone/{print $1}'
+  129  curl https://jsonplaceholder.typicode.com/users/ | awk '/phone/'
+  130  curl https://jsonplaceholder.typicode.com/users/ | awk 'phone/'
+  131  curl https://jsonplaceholder.typicode.com/users/ | awk'/phone/'
+  132  curl https://jsonplaceholder.typicode.com/users/ | awk '/phone/'
+  133  curl https://jsonplaceholder.typicode.com/users/ | awk '/phone/'
+  134  clear
+  135  curl https://jsonplaceholder.typicode.com/users/ | awk '/phone/'
+  136  whoaim
+  137  desktop
+  138  cd desktop
+  139  whoami
+  140  celar
+  141  clear
+  142  pwd
+  143  cd
+  144  ls
+  145  ls -l
+  146  cd ..
+  147  cd .
+  148  pwd
+  149  ls
+  150  ls -l
+  151  cd desktop
+  152  clear
+  153  cd
+  154  cd desktop
+  155  ls -al
+  156  start word
+  157  start PENDIENTES
+  158  start PorAgregarSIDOC.txt 
+  159  start .
+  160  open PorAgregarSIDOC.txt 
+  161  open .
+  162  explorer .
+  163  history
+  164  cd~
+  165  cd ~
+  166  cd desktop
+  167  cd /
+  168  cd c
+  169  cd /
+  170  ls -l
+  171  desktop
+  172  clear
+  173  cd ~
+  174  cd desktop
+  175  car PorAgregarSIDOC.txt 
+  176  cat PorAgregarSIDOC.txt 
+  177  file PorAgregarSIDOC.txt 
+  178  clear
+  179  mkdir carpeta1
+  180  mkdir carpeta 2
+  181  ls -al
+  182  rm 2
+  183  re- 2
+  184  r rem
+  185  rem 2
+  186  rm 2
+  187  rm carpeta
+  188  rmdir carpeta
+  189  rmdir 1
+  190  rmdir 2
+  191  mkdir carpeta2
+  192  cd carpeta1
+  193  mkdir carpeta3
+  194  mkdir carpeta4
+  195  cd carpeta2
+  196  cd carpeta3
+  197  touch doc1.txt
+  198  cd doc1.txt
+  199  explore doc1.txt
+  200  cat doc1.txt
+  201  echo "hola"
+  202  echo "ARCHIVO 1 TEXTO AQUI" >> -a doc1.txt
+  203  cat doc1.txt
+  204  start doc1.txt
+  205  echo "escrito doc 1" >doc1.txt>
+  206  echo "escrito doc 1" >> doc1.txt
+  207  cat doc1.txt 
+  208  start doc1.txt
+  209  mkdir doc2.txt
+  210  rmdir doc2.txt
+  211  touch doc2.txt
+  212  cd
+  213  cd desktop
+  214  cd carpeta1
+  215  cd carpeta4
+  216  touch doc3.txt
+  217  cd.
+  218  cd .
+  219  cd desktop
+  220  cd
+  221  cd desktop
+  222  cd carpeta2
+  223  touch doc4.txt
+  224  touch doc5.txt
+  225  cd
+  226  tree
+  227  tree carpeta1
+  228  carpeta1 tree
+  229  cd desktop
+  230  tree
+  231  tree carpeta1
+  232  cd carpeta1
+  233  cd carpeta3
+  234  mv doc1.txt carpeta4 
+  235  mv doc1.txt >> carpeta4 
+  236  mv doc1.txt >> Comandos  GitBash
+  237  whoami donde estoy, ruta actual
+  238  clear limpiar consola
+  239  cntr L limpia consola
+  240  pwd print working directory directorio de trabajo, donde estoy trabajando
+  241  cd regresar en directorio
+  242  cd name entrar a una carpeta
+  243  ls mostrar archivos
+  244  ls -l mostrar archivos con permisos
+  245  cd ..
+  246  ls -al
+  247  start . abrir el programa o archivo o directorio 
+  248  open .
+  249  explorer.
+  250  history historial de comandos
+  251  cd ~ volver a directorio general del usuario
+  252  cd / entrar a la raíz del disco o sistema
+  253  cd c entrar al directorio del disco C
+  254  mkdir hacer directorio/ carpeta
+  255  touch crear archivo
+  256  echo “escribir dentro de archivo”  escribir dentro de un archivo
+  257  cat mostrar el contenido del archivo en consola
+  258  tecla tab para autocompletar
+  259  rm, -rm borrar
+  260  cd 7 raiz del disco usar comando con el historial 
+  261  file info del archivo 
+  262  cp copiar
+  263  Concatenar >
+  264  unir texto >>
+  265  mv mover archivos
+  266  *.* comodín para manipular archivos
+  267  ? simboliza carácter
+  268  read variable $echo desplegar variable
+  269  bash scripting
+  270  PROMPT__DIRTRIM=1
+  271  chmod permisos de archivos
+  272  rd
+  273  -rf
+  274  code para iniciar código
+  275  cd ~/carpeta3 
+  276  cd ~../carpeta3 
+  277  cd .../carpeta3 
+  278  cd .../carpeta3/ 
+  279  cd ./carpeta3/ 
+  280  cd ../carpeta3/ 
+  281  cd desktop
+  282  cd ../carpeta3
+  283  cd carpeta3
+  284  cd carpeta1
+  285  cd carpeta3
+  286  mv doc2.txt >> ~  
+  287  mv doc2.txt /carpeta4 
+  288  mv doc2.txt ../carpeta4 
+  289  mv doc2.txt ../carpeta4 
+  290  mv doc2.txt ../carpeta2 
+  291  cd
+  292  cd desktop
+  293  cd carpeta3
+  294  cd carpeta4
+  295  cd carpeta1
+  296  cd carpeta4
+  297  mv doc2.txt ../carpeta2
+  298  mv doc3.txt ..carpeta1/carpeta3
+  299  mv doc3.txt ~/carpeta1/carpeta3
+  300  mv doc3.txt ~/c/Users/josse/carpeta1/carpeta3~
+  301  mv doc3.txt >> ~/c/Users/josse/carpeta1/carpeta3~
+  302  cd
+  303  cd dektop
+  304  cd desktop
+  305  ls -l carpeta1
+  306  cd desktop 
+  307  mkdir taller
+  308  cd desktop
+  309  touch doc1.txt
+  310  echo "aqui texto" doc1.txt
+  311  start doc1.txt
+  312  echo "aqui texto" >> doc1.txt
+  313  mv doc1.txt >> ../taller
+  314  mv doc1.txt ../taller
+  315  mv doc1.txt ../taller
+  316  cd taller
+  317  ls 
+  318  mkdir taller2
+  319  cd
+  320  cd desktop
+  321  cd taller
+  322  start doc1.txt
+  323  cd
+  324  start doc1.txt
+  325  cd desktop
+  326  start doc1.txt
+  327  start doc1.txt
+  328  touch doc1.txt
+  329  mv doc1.txt /taller
+  330  mv doc1.txt /c/Users/josse/Desktop/taller
+  331  cd /taller
+  332  cd taller
+  333  echo "texto doc 1" doct1.txt
+  334  cd taller2
+  335  touch doc2.txt
+  336  echo "texto doc2" doc2.txt
+  337  cd
+  338  cd desktop
+  339  mkdir taller
+  340  rmdir taller
+  341  mkdir taller
+  342  cd taller
+  343  mkdir -p carpeta1/carpeta2/carpeta3
+  344  ping google.com
+  345  start /
+  346  start /bin/
+  347  cd desktop
+  348  tree ./
+  349  cd desktop
+  350  mkdir proyectos
+  351  cd proyectos/
+  352  touch createp.sh
+  353  code createp.sh
+  354  /.createp.sh
+  355  git init
+  356  git add readme.md
+  357  git status
+  358  git commit -m "Create readme.md file"
+  359  git config --global usar.email josselin.cruz@uabc.edu.mx
+  360  git config --global user.email josselin.cruz@uabc.edu.mx
+  361  git config --global user.name JossCE
+  362  git config --global list
+  363  git config --global --list
+  364  git commit -m "Create readme.md file"
+  365  git log
+  366  git log --oneline
+  367  git status
+  368  git status
+  369  git log
+  370  git add readme.md"
+  371  git add readme.md
+  372  clear
+  373  git add readme.md
+  374  git commit -m "Add working directory section"
+  375  git log
+  376  git log --oneline
+  377  git status
+  378  git add reade.md
+  379  git status
+  380  git add readme.md
+  381  git status
+  382  git commit
+  383  git log
+  384  git init
+  385  get log
+  386  git log
+  387  git config
+  388  git config --name-only
+  389  git config --list
+  390  git init
+  391  git remote add origin https://github.com/JossCE/git.git
+  392  git push -u origin main
+  393  clearhttps://github.com/JossCE/git.git
+  394  clear
+  395  git branch -M main
+  396  git remote add origin https://github.com/JossCE/git.git
+  397  git push -u origin main
+  398  git init
+  399  git status
+  400  git add .
+  401  git commit -m "Se crea repositorio para practicas pyhton"
+  402  git branch -M main
+  403  git remote add origin https://github.com/JossCE/git.git
+  404  git push -u origin main
+  405  git push -u origin main
+  406  git status
+  407  git log
+  408  git remote add origin https://github.com/JossCE/git.git
+  409  git push -u origin main
+  410  clear
+  411  git init
+  412  git status
+  413  git add .
+  414  git commit -m "Inicio de repositorio Git"
+  415  git branch -M main
+  416  git remote add origin https://github.com/JossCE/Git_Evidencias.git
+  417  git push -u origin main
+  418  git init
+  419  git status
+  420  git add .
+  421  git commit -m "Inicio de repositorio de evidencias de python"
+  422  git config --global user.email josselin.cruz@uabc.edu.mx
+  423  git config --global user.name JossCE
+  424  git remote add origin https://github.com/JossCE/Git_Evidencias.git
+  425  git push -u origin main
+  426  git status
+  427  git add EjercicioPy1 
+  428  git commit -m "Primera practica de python"
+  429  git push
+  430  git add EjercicioPy2 
+  431  git commit -m "Segunda practica de python"
+  432  git push
+  433  git add EjercicioPy3 
+  434  git commit -m "Terecera practica de python"
+  435  git push
+  436  git add EjercicioPy4 
+  437  git commit -m "Cuarta practica de python"
+  438  git push
+  439  git add EjercicioPy5 
+  440  git commit -m "Quinta practica de python"
+  441  git push
+  442  git add EjercicioPy6 
+  443  git commit -m "Sexta practica de python"
+  444  git push
+  445  git add EjercicioPy7 
+  446  git commit -m "Practica 7 de python"
+  447  git push
+  448  git add EjercicioPy8 
+  449  git commit -m "Practica ocho de python"
+  450  git push
+  451  git add EjercicioPy9 
+  452  git commit -m "Practica nueve de python"
+  453  git push
+  454  git add EjercicioPy10
+  455  git commit -m "Practica diez de python"
+  456  git push
+  457  git add EjercicioPy11
+  458  git commit -m "Practica once de python"
+  459  git push
+  460  git init
+  461  git status
+  462  mkdir 3722023-2; cd 3722023-2
+  463  echo "# 3722023-2" >> README.md
+  464  git init
+  465  git add README.md
+  466  git commit -m "First commit"
+  467  git config --list
+  468  git remote add origin https://github.com/JossCE/3722023-2.git
+  469  git push -u origin main
+  470  git status
+  471  git branch --all
+  472  touch main.py
+  473  echo "print('Segundo commit')" >> main.py
+  474  git status
+  475  git add main.py
+  476  git commit -m "Second commit"
+  477  git log --oneline
+  478  git push
+  479  git status
+  480  git log --oneline
+  481  mkdir repaso
+  482  mikdir -p ./repaso/carpeta1/carpeta
+  483  mkdir -p ./repaso/carpeta1/carpeta
+  484  dcd ./repaso/carpeta1/carpeta
+  485  cd ./repaso/carpeta1/carpeta
+  486  rm - rf carpeta1/
+  487  rm - rf carpeta1
+  488  cd ..
+  489  rm - rf carpeta1
+  490  history
+  491  history
+  492  git init
+  493  ./create.sh 
+  494  ls
+  495  ./create.sh 
+  496  cmd //c tree //F ./
+  497  ./create.sh 
+  498  ls
+  499  ./create.sh 
+  500* 
+  501  ./create.sh 
+  502  cmd //c tree //F ./
+  503  ./create.sh 
+  504  ls
+  505  ./create.sh 
+  506  ls
+  507  cmd //c tree //F ./
+  508  cmd //c tree //F ./
+  509  ./create.sh 
+  510  cmd //c tree //F ./
+  511  cmd //c tree //F ./
+  512  ./create.sh 
+  513  cmd //c tree //F ./
+  514  ./create.sh 
+  515  ./create.sh 
+  516  cmd //c tree //F ./
+  517  ./create.sh 
+  518  cmd //c tree //F ./
+  519  ./create.sh 
+  520  cmd //c tree //F ./
+  521  ./create.sh 
+  522  cmd //c tree //F ./
+  523  ./create.sh 
+  524  ./create.sh 
+  525  cmd //c tree //F ./
+  526  ./create.sh 
+  527  ./create.sh 
+  528  ./create.sh 
+  529  ./create.sh 
+  530  cmd //c tree //F ./
+  531  mv examen372.md README.md
+  532  history > history2.txt 
